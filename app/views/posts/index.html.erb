@@ -1,0 +1,15 @@
+<h1>Hello  World</h1>
+
+<br>
+
+<% @posts.each do |post| %>
+
+  <div class="blog_post" id="<%= post.title %>">
+    <h3 class="blog_title" id"<%= post.title %>">
+        <%= post.title %>
+    </h3>
+    <p class="post"> <%= post.body[0...300] %> </p>
+    <%= link_to "Read More", post, class: "read_more_button" %>
+  </div>
+
+<% end %>
