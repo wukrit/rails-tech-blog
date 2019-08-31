@@ -1,0 +1,11 @@
+<% require 'redcarpet' %>
+<% require 'redcarpet/render_strip' %>
+<% renderer = Redcarpet::Render::HTML.new(hard_wrap: true) %>
+<% markdown = Redcarpet::Markdown.new(renderer, extensions = {}) %>
+
+<div class="blog_post" id="<%= @post.title %>">
+  <h1 class="blog_title" id"<%= @post.title %>">
+      <%= @post.title %>
+  </h1>
+  <%= raw markdown.render(@post.body) %>
+</div>
