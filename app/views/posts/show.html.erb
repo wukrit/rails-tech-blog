@@ -4,8 +4,12 @@
 <% markdown = Redcarpet::Markdown.new(renderer, extensions = {}) %>
 
 <div class="blog_post" id="<%= @post.title %>">
-  <h1 class="blog_title" id"<%= @post.title %>">
+  <h1 class="post_title" id"<%= @post.title %>">
       <%= @post.title %>
   </h1>
-  <%= raw markdown.render(@post.body) %>
+  <div class="post_body">
+    <%= raw markdown.render(@post.body) %>
+  </div>
 </div>
+
+<%= link_to "All Posts", posts_path %> | <%= link_to "Edit Post", edit_post_path %> | <%= link_to "Delete Post", @post, method: :delete %>

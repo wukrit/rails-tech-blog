@@ -1,15 +1,19 @@
-<h1>Hello  World</h1>
-
-<br>
+<% require 'redcarpet' %>
+<% require 'redcarpet/render_strip' %>
+<% renderer = Redcarpet::Render::HTML.new(hard_wrap: true) %>
+<% markdown = Redcarpet::Markdown.new(renderer, extensions = {}) %>
 
 <% @posts.each do |post| %>
 
   <div class="blog_post" id="<%= post.title %>">
-    <h3 class="blog_title" id"<%= post.title %>">
+    <h3 class="post_title" id"<%= post.title %>">
         <%= post.title %>
     </h3>
-    <p class="post"> <%= post.body[0...300] %> </p>
-    <%= link_to "Read More", post, class: "read_more_button" %>
+    <div class="post_body">
+      <%= raw markdown.render(post.body[0...300]) %>
+      <%= link_to "Read More", post, class: "read_more_button" %>
+    </div>
   </div>
-
+  <hr class="post_seperator">
+  <br>
 <% end %>

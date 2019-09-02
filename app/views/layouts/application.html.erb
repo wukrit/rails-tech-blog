@@ -7,9 +7,22 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=B612&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+    <div class="wrapper">
+      <div class="top_banner">
+        <h1> Rails Custom Tech Blog </h1>
+      </div>
+      <div class="nav_div">
+        <ul class="nav">
+          <li><%= link_to "Home", posts_path %></li>
+          <li><%= link_to "New Post", new_post_path %></li>
+        </ul>
+      </div>
+      <%= yield %>
+    </div>
   </body>
 </html>

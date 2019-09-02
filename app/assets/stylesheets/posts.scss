@@ -1,3 +1,113 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: #FFU;
+  font-family: 'Playfair Display', serif;
+  color: #221F22;
+}
+
+a {
+  color: #D4635D;
+  text-decoration: none;
+}
+
+div.wrapper {
+  width: 75%;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #F2F7EF;
+  border-radius: 5px;
+}
+
+div.top_banner {
+  background-color: #F2F7EF;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%
+}
+
+div.top_banner h1 {
+  color: #D4635D;
+}
+
+
+// Nav Bar
+
+div.nav_div {
+  width: 100%;
+  float: left;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+ul.nav {
+  position: sticky;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  overflow: hidden;
+  background-color: #E7BCA8;
+  width: 100%;
+}
+
+ul.nav li {
+  float: left;
+}
+
+ul.nav li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.nav li a:hover {
+  color: #89A479;
+  background-color: #F2F7EF;
+}
+
+// Blog Post
+
+div.blog_post {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+div.blog_post hr {
+  width: 60%;
+}
+
+hr.post_seperator {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+// New Post Form
+
+input {
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  border: 1px solid #ced4da;
+  box-sizing: content-box;
+  background-color: #FFU;
+  border-radius: 2px;
+}
+
+textarea#post_body {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  border: 1px solid #ced4da;
+  box-sizing: content-box;
+  background-color: #FFU;
+  border-radius: 2px;
+}
